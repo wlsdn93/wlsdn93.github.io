@@ -4,3 +4,8 @@ main:
     url: https://wlsdn93.github.io/
   - title: "Github"
     url: https://github.com/wlsdn93
+
+
+sidebar:
+  - title: "Java"
+    url: https://wlsdn93.github.io/java
