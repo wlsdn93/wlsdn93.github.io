@@ -12,7 +12,7 @@
 
 #theme                    : "minimal-mistakes-jekyll"
 remote_theme             : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "mint" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "ko-KR"
@@ -107,7 +107,7 @@ author:
   name             : "Jinwoo An"
   avatar           : "/assets/images/avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an **amazing** person."
-  location         : "Seoul"
+  location         : "South Korea"
   email            : "wind0895@gmail.com"
   links:
     - label: "Email"
@@ -151,6 +151,9 @@ footer:
       icon: "fab fa-fw fa-instagram"
       # url:
 
+after_footer_scripts:
+  - https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js
+  - assets/js/clipboardrouge.js
 
 # Reading Files
 include:
@@ -287,7 +290,7 @@ defaults:
       layout: single
       classes: wide
       author_profile: true
-      read_time: true
+      read_time: false
       comments: true
       share: false
       related: true
