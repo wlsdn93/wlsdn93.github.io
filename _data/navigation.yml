@@ -7,5 +7,9 @@ main:
 
 
 sidebar:
+  - title: "전체 글"
+    url: /categories/
   - title: "Java"
-    url: /java/
+    url: /categories/java/
+  - title: "Spring"
+    url: /categories/spring/
