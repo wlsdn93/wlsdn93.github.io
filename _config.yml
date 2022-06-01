@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Jinwoo An"
   avatar           : "/assets/images/avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "Jr. Backend Engineer"
   location         : "South Korea"
   email            : "wind0895@gmail.com"
   links:
@@ -288,7 +288,6 @@ defaults:
       type: posts
     values:
       layout: single
-#      classes: wide
       author_profile: true
       read_time: false
       comments: true
