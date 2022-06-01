@@ -4,6 +4,7 @@ excerpt : "문자열 인코딩, UTF-8, Base64의 기초지식"
 author_profile: true
 sidebar:
   nav: "sidebar"
+category: WebBasic
 ---
 
 인코딩이란 특정한 목적을 위해 정보의 형태를 변환하는 것을 의미한다.
