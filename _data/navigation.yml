@@ -13,3 +13,5 @@ sidebar:
     url: /categories/java/
   - title: "Spring"
     url: /categories/spring/
+  - title: "Web Basic"
+    url: /categories/web-basic/
