@@ -59,12 +59,12 @@ category: WebBasic
 # **Base64**
   **플랫폼 독립적으로(문자 집합의 영향을 받지 않고)** 바이너리 데이터(이미지, 오디오, 실행파일 등)가 전송, 저장 되는것을 보장하기위해 사용하는 인코딩 방식
   
-  ASCII 문자중 제어 문자와 일부 특수문자를 제외한 64개의 문자만을 사용한다.      
+  ASCII 문자중 제어 문자와 일부 특수문자를 제외한 64개의 문자만을 사용한다.        
+  ![image.png](/assets/images/web-basic-images/base64(2).png)   
     
   **e.g. 인코딩 방식**
   ![image.png](/assets/images/web-basic-images/base64.png)  
   
-  ![image.png](/assets/images/web-basic-images/base64(2).png)  
 
 3바이트(24비트)를 6비트씩 4개로 쪼개서 Base64 코드 4개로 표현한다.
 
