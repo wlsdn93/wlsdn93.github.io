@@ -2,8 +2,7 @@
 main:
   - title: "Home"
     url: https://wlsdn93.github.io/
-  - title: "Github"
-    url: https://github.com/wlsdn93
+
 
 
 sidebar:
