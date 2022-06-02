@@ -6,7 +6,6 @@ sidebar:
 nav: "sidebar"
 toc: true
 toc_sticky: true
-category: Life
+category: LifeStory
 ---
 
-### **비전공자가 독학으로 개발자가 된 이야기**
