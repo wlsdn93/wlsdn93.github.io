@@ -20,7 +20,7 @@ title                    : "독학은 괴로워"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Jinwoo An"
-description              : "An amazing website."
+description              : "누군가에게 도움이 될 수 있기를"
 url                      : "https://wlsdn93.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "wlsdn93/blog-comments"  # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
