@@ -1,6 +1,6 @@
 ---
 title : "문자열 인코딩"
-excerpt : "문자열 인코딩, UTF-8, Base64의 기초지식"
+excerpt : "간단한 문자열 인코딩, UTF-8, Base64 이야기"
 author_profile: true
 sidebar:
   nav: "sidebar"
