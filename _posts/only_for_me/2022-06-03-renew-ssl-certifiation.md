@@ -7,8 +7,7 @@ sidebar:
 category: OnlyForMe
 ---
 
-취준생 시절에 만들고 배포한 **[첫 프로젝트](https://freemath.online)** 를 보완하고 서비스로 운영해보고 싶다는 생각이 들었다.  
-애석하게도 SSL인증서가 만료되어 갱신을 위해 한참 구글링을 해야했다. 미래에도 다시 구글링을 하고 있을 나를 위해 이 포스트를 작성한다.   
+미래에 또 다시 구글링을 하고 있을 나를 위해 이 포스트를 작성한다.   
 
 ## **프론트 인증서 갱신**
 
@@ -23,7 +22,7 @@ server {
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 }
 ```
-따라서 아래 명령어를 통해 프론트쪽에서 사용할 인증서를 아주 쉽게 갱신할 수 있다.  
+따라서 아래 명령어만 입력하면 인증서를 아주 쉽게 갱신할 수 있다.  
 
 ```shell
 sudo certbot renew
@@ -33,7 +32,7 @@ sudo certbot renew
 
 ## **서버 인증서 갱신**   
 스프링부트 서버에 인증서를 등록하기 위해선 **`pkcs#12`** 라는 공개키 암호 표준을 만족하는 **`keystore.p12`** 파일을 업로드하고, 이를 환경설정에 등록해주어야 한다.  
-`certbot`을 통해 발급받은 인증서를 이용해 **`keystore.p12`** 파일을 생성하기 위해, **`pem`** 키들이 위치한 디렉토리로 이동해 아래의 명령어를 입력한다.  
+**`certbot`** 을 통해 발급받은 인증서를 이용해 **`keystore.p12`** 파일을 생성하기 위해, **`pem`** 키들이 위치한 디렉토리로 이동해 아래의 명령어를 입력한다.  
 e.g. 나는 **`/etc/letsencrypt/live/freemath.online`** 경로로 이동했다.   
 
 **주의! [name], [password]는 직접 입력하는 값이다.**   
