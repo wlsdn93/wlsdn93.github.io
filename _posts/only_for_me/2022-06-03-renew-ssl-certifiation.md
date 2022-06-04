@@ -11,7 +11,7 @@ category: OnlyForMe
 
 ## **프론트 인증서 갱신**
 
-나는 이미 **`/etc/nginx/site-available/`** 경로에 위치한 **`default`** 파일에 아래와 같이 key 경로를 잡아두었다.  
+이전에 이미 **`/etc/nginx/site-available/`** 경로에 위치한 **`default`** 파일에 아래와 같이 key 경로를 입력해두었기 때문에  
 ```
 server {
     listen [::]:443 ssl ipv6only=on; # managed by Certbot
@@ -22,7 +22,7 @@ server {
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 }
 ```
-따라서 아래 명령어만 입력하면 인증서를 아주 쉽게 갱신할 수 있다.  
+아래 명령어만 입력하면 인증서를 아주 쉽게 갱신할 수 있다.  
 
 ```shell
 sudo certbot renew
