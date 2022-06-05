@@ -5,5 +5,5 @@ permalink: /categories/life/
 author_profile: true
 taxonomy: LifeStory
 sidebar:
-nav: "sidebar"
+  nav: "sidebar"
 ---
