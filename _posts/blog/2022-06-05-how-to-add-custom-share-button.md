@@ -28,7 +28,7 @@ defaults:
 ```
   
 공유하기 기능을 활성화 해주면, 아래와 같이 포스트 최하단에 Twitter, Facebook, LinkedIn 버튼들이 만들어진다.  
-![image.png](/assets/images/blog-images/social-share.PNG)  
+![image.png](/assets/images/blog-images/social-share.png)  
    
 내 기준에서는 세 가지 버튼들 보다는, **`Copy URL`** 버튼 하나만 사용하고 싶었기 때문에 간단한 커스텀을 해보았다.  
 
