@@ -80,7 +80,7 @@ category: Life
     ![image.png](/assets/images/life/web-service-architecture.png)  
     `Docker`, `CI/CD` 와 같은 단어들을 이 때 처음 접했다. 하지만 계속 새로운 공부만 하다가는 취업이 너무 늦어질거라는 생각에 우선 쌩(?) 배포를 했다.  
 
-### **6. 포트폴리오**  
+### **6. 포트폴리오 만들기**  
 `Notion` 을 이용해 포트폴리오를 만들었다. 역시나 '개발자 포트폴리오' 와 같은 키워드로 구글링을 해가며, 남들이 만든 포트폴리오를 참고했다.
 나는 [이렇게](https://palm-cheque-a4f.notion.site/JinWoo-An-e4b3bd044f3245a487497c26e6883a9c) 만들었다.  
 
