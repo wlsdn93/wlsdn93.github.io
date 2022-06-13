@@ -59,15 +59,15 @@ Parent p = new Child();
   
 위 코드를 그림으로 나타낸다면 아래와 같이 생각 할 수 있다.   
 
-![image.png](/assets/images/java/inheritance.png)
+![image.png](/assets/images/java/inheritance.png) 
 
-  
-**우리는 변수의 자료형과, 변수에 담겨 있는 실제 값이 갖는 '기능'과 '상태'는 별개 라는 것을 이해해야 한다.**
+**즉 자료형을 선언 한다는 것은 해당 변수에 담겨있는 값이 수행 할 수 있는 '기능'과 '상태'를 JVM에게 알려주는 것이다.**  
+
+그렇다면 `overriding` 된 메서드는 어떻게 실행 될 까?  
 
 > The Java virtual machine (JVM) calls the appropriate method for the object that is referred to in each variable. 
 > It does not call the method that is defined by the variable's type. 
 > This behavior is referred to as virtual method invocation and demonstrates an aspect of the important polymorphism features in the Java language.
-
-`JVM`은 상속관계에서 오버라이딩된 동일한 이름의 메서드가 충돌했을 때, 런타임 시점의 메서드(변수에 담겨있는 실제 객체)가 컴파일 타임 시점의 메서드(변수를 정의할 때, 사용된 자료형의 메서드)보다 우선적으로 실행된다.  
-**자료형을 선언 한다는 것은 해당 변수에 담겨있는 값이 수행 할 수 있는 '기능'과 '상태'를 JVM에게 알려주는 것이다.**  
-
+  
+**`JVM`**은 오버라이딩된 동일한 이름의 메서드가 충돌했을 때, '**런타임 시점의 메서드(변수에 담겨있는 실제 객체의 메서드)**'를 '**컴파일 타임 시점의 메서드(변수의 자료형에 정의된 메서드)**'보다 우선적으로 실행한다.  
+  
