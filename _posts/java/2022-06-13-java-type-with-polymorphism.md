@@ -1,5 +1,5 @@
 ---
-title : "다형성 : 변수의 자료형의 갖는 의미"
+title : "다형성 : 변수의 자료형이 갖는 의미"
 excerpt : "변수의 속성을 정의하는 자료형과, 변수가 실제로 갖고 있는 값을 구분하자"
 author_profile: true
 sidebar:
