@@ -1,6 +1,6 @@
 ---
-title : "다형성 : 변수의 자료형이 갖는 의미"
-excerpt : "변수의 속성을 정의하는 자료형과, 변수가 실제로 갖고 있는 값을 구분하자"
+title : "변수의 자료형이 갖는 의미"
+excerpt : "변수를 정의하는 자료형과, 변수가 참조하고 있는 실제 객체를 구분하자"
 author_profile: true
 sidebar:
   nav: "sidebar"
@@ -22,7 +22,7 @@ Object[] oArr = intArr;
 oArr[2] = "hello";
 System.out.println(Arrays.toString(oArr));
 ```
-위 코드를 실행하면 어떤 결과가 나올 까? [1, 2, hello, 4] 가 출력될 까?  
+위 코드를 실행하면 어떤 결과가 나올까? [1, 2, hello, 4] 가 출력될까?  
 
 정답은 "예외가 발생한다" 이다. 정확히 얘기 하자면 **`ArrayStoreException`**이 발생한다.  
 
