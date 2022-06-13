@@ -33,13 +33,13 @@ System.out.println(Arrays.toString(oArr));
 > The dictionary definition of polymorphism refers to a principle in biology in which an organism or species can have many different forms or stages.
 > This principle can also be applied to object-oriented programming and languages like the Java language.
   
-다형성이란 **다양한 형태를 갖을 수 있음** 그 이상도 이하도 아니다.  
+다형성이란 **"다양한 형태를 갖을 수 있는 성질"** 그 이상도 이하도 아니지만, 참 온갖 곳에서 다형성 이라는 단어를 사용한다.  
   
 매개변수의 종류와 갯수가 다르고, 접근 제한자와 이름이 같은 메서드를 여러개 정의하는 `overloading` 은 메서드 레벨에서의 다형성이다.
   
 부모 클래스를 상속받거나 혹은 인터페이스를 구현한 클래스가, 기존에 정의된 메서드의 수행방식을 재정의 하여 사용하는 `overriding` 은 클래스 레벨에서의 다형성이다.  
    
-우리는 다형성에 의해 `자녀 클래스 타입의 객체`를 `부모 클래스 변수`에 할당 할 수 있다는 것을 잘 알고 있다.   
+우리는 다형성에 의해 `자녀 타입 객체`를 `부모 타입 변수`에 할당 할 수 있다는 것을 알고 있다.   
 
 ```java
 public class InheritanceExample {
@@ -50,9 +50,14 @@ public class InheritanceExample {
     }
 }
 ```
-> Subclasses of a class can define their own unique behaviors and yet share some of the same functionality of the parent class.  
-  
+   
 변수 `p`에 담겨있는 것은 분명 `Child` 타입의 객체 인데, 왜 자녀 클래스에 정의된 기능을 수행할 수 없을까?     
+  
+```java
+Parent p = new Child();
+```
+  
+위 코드를 그림으로 나타낸다면 아래와 같이 생각 할 수 있다.   
 
 ![image.png](/assets/images/java/inheritance.png)
 
