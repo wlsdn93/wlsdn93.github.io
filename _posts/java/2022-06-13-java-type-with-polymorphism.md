@@ -59,7 +59,7 @@ Parent p = new Child();
 
 > The Java virtual machine (JVM) calls the appropriate method for the object that is referred to in each variable. 
 > It does not call the method that is defined by the variable's type. 
-> This behavior is referred to as `virtual method invocation` and demonstrates an aspect of the important polymorphism features in the Java language.
+> This behavior is referred to as **[`virtual method invocation`](https://blogs.oracle.com/javamagazine/post/mastering-the-mechanics-of-java-method-invocation)** and demonstrates an aspect of the important polymorphism features in the Java language.
   
 **`JVM`**은 **`overriding`** 된 메서드를 호출했을 때, 변수가 참조하고 있는 **`객체의 자료형이 갖는 메서드`**를 **`변수의 자료형이 갖는 메서드`**보다 우선적으로 실행한다.  
   
