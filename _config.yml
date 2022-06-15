@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "독괴"
   avatar           : "/assets/images/avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "나의 설명이 상대방을 이해시키지 못한다는 것은, 내가 이해하지 못한것이다."
+  bio              : "상대방을 이해시키지 못했다는 것은, 내가 이해하지 못한것이다."
   location         : "Seoul, South Korea"
   email            : "wind0895@gmail.com"
   github           : "wlsdn93"
