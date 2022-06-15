@@ -14,7 +14,7 @@ Integer[] intArr = new Integer[]{1, 2, 3, 4};
 intArr[2] = "hello";
 ```  
   
-에러를 해결해보자. **`intArr`** 을 **`Object[]`** 변수에 옮겨 담은 뒤, 다시 문자열을 대입해보면 아무 문제가 없어보인다.  
+에러를 해결해보자. **`intArr`** 을 **`Object[]`** 타입 변수에 대입 하고, 다시 문자열을 대입해보면 아무 문제가 없어보인다.  
 
 ```java
 Integer[] intArr = new Integer[]{1, 2, 3, 4};
