@@ -104,9 +104,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "독괴"
+  name             : "독학은 괴로워"
   avatar           : "/assets/images/avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "상대방을 이해시키지 못했다는 것은, 내가 이해하지 못한것이다."
+  bio              : "괴로워도 웃는 일류가 될 테야"
   location         : "Seoul, South Korea"
   email            : "wind0895@gmail.com"
   github           : "wlsdn93"
