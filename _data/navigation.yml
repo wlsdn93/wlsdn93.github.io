@@ -13,9 +13,11 @@ sidebar:
     url: /categories/java/
   - title: "Spring"
     url: /categories/spring/
-  - title: "Web Basic"
+  - title: "웹개발 기초"
     url: /categories/web-basic/
-  - title: "Life Story"
+  - title: "잡다한 개발 지식"
+    url: /categories/dev-basic/
+  - title: "사는 얘기"
     url: /categories/life/
   - title: "Blog"
     url: /categories/blog/
