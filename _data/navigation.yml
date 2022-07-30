@@ -13,6 +13,8 @@ sidebar:
     url: /categories/java/
   - title: "Spring"
     url: /categories/spring/
+  - title: "코딩 테스트"
+    url: /categories/algorithm/
   - title: "웹개발 기초"
     url: /categories/web-basic/
   - title: "잡다한 개발 지식"
