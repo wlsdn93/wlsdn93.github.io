@@ -55,10 +55,9 @@ const solution = (n, L, R) => {
 
 ```javascript
 const solution = (n, L, R) => {
-    return Array(R - L  + 1).fill(L).map((_, index) => {
-        return L + index
-    }).map((elem, _) => {
-        return Math.max(parseInt(elem / n) + 1, elem % n + 1)
-    })
+    return Array(R - L  + 1)
+            .fill(L)
+            .map((_, index) => L + index)
+            .map((elem, _) => Math.max(parseInt(elem / n) + 1, elem % n + 1))
 }
 ```
