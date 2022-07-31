@@ -27,9 +27,12 @@ console.log(array);
 
 ```javascript
 const solution = (array, commands) => {
-    return commands.reduce((acc, cur) => {
-        return [...acc, array.slice(cur[0] - 1, cur[1]).sort((a, b) => { 
-            return a - b })[cur[2] - 1]]
+    return commands.reduce((answer, command) => {
+        const left = command[0] - 1
+        const right = command[1]
+        const k = command[2] - 1
+        const arr = array.slice(left, right).sort((a, b) =>  a - b )
+        return [...answer, arr[k]]
     }, [])
 }
 ```
