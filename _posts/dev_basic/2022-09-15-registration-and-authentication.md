@@ -48,7 +48,7 @@ category: DevBasic
   >    
   > 이러한 방식을 **PKI(Public Key Infrastructure)** 라고 부릅니다.  
   >   
-  > 공격자가 등록 요청 메세지에 포함된 **credential public key**를 자신의 공개키로 바꿔치기를 시도 하더라도, **attestation certificate에 포함된 공개키 이용한 전자서명 검증을 통과 할 수 없어 안전합니다.**
+  > 공격자가 등록 요청 메세지에 포함된 **credential public key**를 자신의 공개키로 바꿔치기하는 스푸핑 공격을 시도하더라도, **attestation public key를 이용한 전자서명 검증을 통해 공격을 무효화 할 수 있습니다.**
   > 
   > 사실 **[Web Authentication API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API)**는 암호화된 통신에서만 사용 가능하기 때문에, 공개키가 외부의 공격에 의해 변조될 가능성은 매우 낮습니다.  
 
