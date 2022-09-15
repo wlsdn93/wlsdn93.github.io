@@ -13,7 +13,9 @@ category: DevBasic
 
 샘플 코드와 레퍼런스를 보다보면 튀어 나오는 **Attestation, relying party, MDS** 와 같은 단어들이 무슨 의미인지 조차 이해하지 못한채로는 샘플 코드의 한 줄 한 줄이 무슨 목적으로 존재하는지 이해할 수 없었습니다.    
 
-이번 포스트는 **FIDO의 인증 프로세스**가 어떻게 작동하는지, 그리고 각각의 용어들이 어떤 의미로 사용되는지 조금 더 자세히 알아보고자 합니다.
+이번 포스트는 **FIDO의 인증 프로세스**가 어떻게 작동하는지, 그리고 각각의 용어들이 어떤 의미로 사용되는지 조금 더 자세히 알아보고자 합니다.  
+
+영어 단어를 최대한 보존한 채로 포스팅 하는 이유는 개발 문서는 영어이기 때문입니다.. :/
 
 
 # **등록(Registration)**  
@@ -62,7 +64,7 @@ category: DevBasic
          
   2. **relying party**는 우선 **FIDO Alliance**에서 **JSON**형식으로 제공하는 **[MDS(Metadata Service)](https://fidoalliance.org/metadata)**로부터 **unique model number**를 이용해 **metadata statement**를 찾습니다.  
 
-     **metadata statement**는 **attestation root certificate**  **device metadata**두 가지 정보를 필수로 포함하고 있습니다.  
+     **metadata statement**는 **attestation root certificate** 와 **device metadata**두 가지 정보를 필수로 포함하고 있습니다.  
 
      **attestation root certificate**는 인증 장치 제조사에 인증서를 발급해준 CA기관의 인증서로 **attestation certificate**를 검증하는데 사용됩니다.  
       
@@ -100,4 +102,4 @@ category: DevBasic
 &nbsp;  
 &nbsp;  
   
-잘못된 정보에 대한 피드백을 언제나 환영합니다. 많은 지적 바랍니다 :D 
+잘못된 정보에 대한 피드백을 언제나 환영합니다. 많은 지적 바랍니다 :D  
