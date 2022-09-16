@@ -60,7 +60,7 @@ category: DevBasic
 
   3. 인증장치(ex. 핸드폰)는 사용자를 검증(ex. 지문 인식을 통한 잠금해제)합니다. 
 
-  4. 사용자 검증을 통과한 후, 인증장치는 서버로부터 받은 **challenge, user info, relying party info등의 정보** 이용해 **credential key pair**를 생성합니다.  
+  4. 사용자 검증을 통과한 후, 인증장치는 서버로부터 받은 **challenge, user info, relying party info등의 정보**를 이용해 **credential key pair**를 생성합니다.  
         
      이때 생성된 **credential private key**는 인증 장치의 안전한 공간에 저장되어, 인증 단계에서 사용됩니다.  
   
@@ -79,7 +79,7 @@ category: DevBasic
       
   8. **attestation certificate**에 대한 검증이 완료되면, **FIDO Server**는 **attestation certificate**에 포함되어 있는 **attestation public key**를 이용해 **signature**를 검증합니다.
      
-     위의 모든 검증이 완료되면, 서버는 인증 장치로부터 전달받은 **credential public key**와 **credential id** **clientData**를 통해 확인한 인증 요청자의 계정에 매핑하고 저장합니다.  
+     위의 모든 검증이 완료되면, 서버는 인증 장치로부터 전달받은 **credential public key**와 **credential id** 그리고 **clientData**를 통해 확인한 인증 요청자의 계정에 매핑하고 저장합니다.  
   
   
 # **인증(Authentication)**  
@@ -94,7 +94,7 @@ category: DevBasic
 
   4. 인증장치는 인증 요청자가 **rpId**와 매칭되는 **credential private key**의 주인임을 검증(지문, 얼굴, PIN 등을 사용)합니다.   
    
-  5. 검증에 통과하면 인증 장치는 **credential private key**를 이용해 **challenge**를 전자서명하여 **assertion signature** 을 생성합니다.  
+  5. 검증에 통과하면 인증 장치는 **credential private key**를 이용해 **challenge**를 전자서명하여 **assertion signature**를 생성합니다.  
   
   6. 인증장치는 **assertion signature** 와 **authenticator data**를 브라우저에 전달합니다.    
 
