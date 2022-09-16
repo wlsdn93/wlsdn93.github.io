@@ -92,7 +92,7 @@ FIDO 인증방식은 **등록**과 **인증** 이라는 두 가지 단계로 이
 > **Web Authentication API (WebAuthn)**   
 WebAuthn은 FIDO 인증을 웹 환경으로 확장시킨 **FIDO2 Specification**의 핵심 요소이자, 웹에서 비밀번호에 의존하지 않는 인증 방식의 표준 API 입니다.  
   
-이번 학습은 **[WebAuthn MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API)** 와 **[WebAuthn4j spring security reference](https://webauthn4j.github.io/webauthn4j-spring-security/en/)** 을 참고해
+이번 학습은 **[WebAuthn MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API)** 와 **[WebAuthn4j reference](https://webauthn4j.github.io/webauthn4j/en/)** 을 참고해
 **Vue.js**와 **SpringBoot**로 구성된 웹서비스에서 핸드폰 지문인식을 이용한 로그인 구현을 목표로 합니다.  
   
 ---
