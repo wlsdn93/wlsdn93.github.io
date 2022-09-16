@@ -1,5 +1,5 @@
 ---
-title : "FIDO 등록과 인증"
+title : "Web 환경에서의 FIDO 등록과 인증"
 excerpt : "등록(Registration)과 증명(Attestation), 인증(Authentication)과 승인(Assertion)에 대해 알아봅니다"
 author_profile: true
 sidebar:
@@ -52,45 +52,57 @@ category: DevBasic
   > 
   > 사실 **[Web Authentication API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API)**는 암호화된 통신에서만 사용 가능하기 때문에, 공개키가 외부의 공격에 의해 변조될 가능성은 매우 낮습니다.  
 
- 사용자가 최초로 **Relying Party(Service Provider)**에 인증 수단 등록을 요청하면 아래와 같은 등록 프로세스가 동작하게 됩니다.  
+  1. 사용자가 최초로 **Relying Party(Service Provider)**에 인증 수단 등록을 요청합니다.    
+  
+  2. 서버는 **challenge, user info, relying party info 등의 정보**를 클라이언트의 인증장치에게 응답합니다.
+      
+     **challenge**는 최소 16바이트 이상의 임의의 값이어야 하며, 반드시 서버에 의해 생성되어야 합니다.
 
-  1. 인증장치(ex. 핸드폰)는 사용자를 검증하고(ex. 지문 인식을 통한 잠금해제), **credential key pair**를 생성한 후  
-       
-     * **credential public key**를 **attestation private key**를 이용해 전자서명한 **signature** 
+  3. 인증장치(ex. 핸드폰)는 사용자를 검증(ex. 지문 인식을 통한 잠금해제)합니다. 
+
+  4. 사용자 검증을 통과한 후, 인증장치는 서버로부터 받은 **challenge, user info, relying party info등의 정보** 이용해 **credential key pair**를 생성합니다.  
+        
+     이때 생성된 **credential private key**는 인증 장치의 안전한 공간에 저장되어, 인증 단계에서 사용됩니다.  
+  
+  5. 이후 인증장치는 아래의 값들을 포함하고 있는 **attestation**을 생성해 브라우저에게 전달합니다.  
+     * **signature**  **(attestation private key** 에 의해 전자서명된 **credential public key)**
      * **attestation certificate**   
      * **unique model number**
-        
-     세 가지를 **relying party**로 전달합니다.  
-         
-  2. **relying party**는 우선 **FIDO Alliance**에서 **JSON**형식으로 제공하는 **[MDS(Metadata Service)](https://fidoalliance.org/metadata)**로부터 **unique model number**를 이용해 **metadata statement**를 찾습니다.  
+  
+  6. 브라우저는 **최종 데이터(clientData 와 attestation)**를 **relying party** 서버로 전달하여 등록을 요청합니다.  
+           
+  7. **relying party**는 우선 **FIDO Alliance**에서 **JSON**형식으로 제공하는 **[MDS(Metadata Service)](https://fidoalliance.org/metadata)**로부터 **unique model number**를 이용해 **metadata statement**를 찾습니다.  
 
      **metadata statement**는 **attestation root certificate** 와 **device metadata**두 가지 정보를 필수로 포함하고 있습니다.  
 
      **attestation root certificate**는 인증 장치 제조사에 인증서를 발급해준 CA기관의 인증서로 **attestation certificate**를 검증하는데 사용됩니다.  
       
-  3. **attestation certificate**에 대한 검증이 완료되면, **FIDO Server**는 **attestation certificate**에 포함되어 있는 **attestation public key**를 이용해 **signature**를 검증합니다.
+  8. **attestation certificate**에 대한 검증이 완료되면, **FIDO Server**는 **attestation certificate**에 포함되어 있는 **attestation public key**를 이용해 **signature**를 검증합니다.
      
-     위의 모든 검증이 완료되면, 서버는 인증 장치로부터 전달받은 **credential public key**를 사용자의 계정에 매핑하고 저장합니다.  
-
-  **2번 과정은 필요에 따라 수행하지 않아도 괜찮습니다.**  
+     위의 모든 검증이 완료되면, 서버는 인증 장치로부터 전달받은 **credential public key**와 **credential id** **clientData**를 통해 확인한 인증 요청자의 계정에 매핑하고 저장합니다.  
+  
   
 # **인증(Authentication)**  
   
 ---
    
-  서비스에 등록이 완료된 사용자는 이후 인증을 요청할 때 아래와 같은 인증 프로세스가 동작하게 됩니다.  
-
-  1. 인증서버는 인증장치에게 **challenge**를 전달합니다.  
-
-  2. 인증장치는 인증 요청자가 **credential private key**의 주인임을 검증(지문, 얼굴, PIN 등)합니다.   
-   
-  3. 검증에 통과하게 되면 인증 장치는 **credential private key**를 이용해 **challenge**를 전자서명하여 **assertion** 을 생성합니다.  
+  1. 사용자가 서비스에 인증을 요청합니다.     
   
-  4. 인증장치는 **assertion**을 인증서버에 전달함으로서 인증에 대한 승인을 요청합니다.    
-  
-  5. 인증서버는 사용자 계정에 매핑되있는 **credential public key**를 이용해 **assertion**을 복호화하여 서버에서 전달한 **challenge** 확인합니다.  
+  2. 인증서버는 브라우저에 **challenge, rpId, allowCredentials등의 정보를** 응답합니다.   
+
+  3. 브라우저는 **rpId, clientDataHash**를 인증장치에 전달합니다.  
+
+  4. 인증장치는 인증 요청자가 **rpId**와 매칭되는 **credential private key**의 주인임을 검증(지문, 얼굴, PIN 등을 사용)합니다.   
    
-  6. 인증 성공시 인증서버는 요청에 대한 응답으로 **인가(Authorization)**를 위한 토큰 혹은 쿠키를 응답에 포함하여 인증장치에게 전달합니다.   
+  5. 검증에 통과하면 인증 장치는 **credential private key**를 이용해 **challenge**를 전자서명하여 **assertion signature** 을 생성합니다.  
+  
+  6. 인증장치는 **assertion signature** 와 **authenticator data**를 브라우저에 전달합니다.    
+
+  7. 브라우저는 **최종 데이터(clientData, assertion signature, authenticatorData)** 를 인증 서버로 전달합니다.  
+    
+  8. 인증서버는 사용자 계정에 매핑되있는 **credential public key**를 이용해 **assertion**을 복호화하여 서버에서 전달한 **challenge** 를 확인합니다.  
+   
+  9. 인증 성공시 인증서버는 요청에 대한 응답으로 **인가(Authorization)**를 위한 **토큰** 혹은 **쿠키**를 응답에 포함하여 인증장치에게 전달합니다.   
      
 
 ---
