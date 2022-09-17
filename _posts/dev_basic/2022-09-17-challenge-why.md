@@ -33,17 +33,17 @@ FIDO 인증방식에서는 **[replay attack](https://academy.binance.com/en/arti
 
 **[공식문서](https://w3c.github.io/webauthn/#sctn-cryptographic-challenges)**에서는 이 **challenge**에 대한 스펙을 규정하고 있습니다.   
   
-근데 왜 하필 최소 16Byte 인걸까요 ? 그냥 **UUID**같은 값을 사용하면 안되는 걸까요?  
+근데 왜 하필 최소 16Byte 인걸까요? 그냥 **UUID**같은 값을 사용하면 안되는 걸까요?  
   
 ## **UUID는 비효율적이고 안전하지 않다.**  
   
-네 uuid로는 충분하지 안답니다.. 왜 안되는지는 아래 글을 참고해주시기 바랍니다.  
+네 uuid로는 충분하지 안답니다..  왜 안되는지는 아래 글을 참고해주시기 바랍니다.  
 
 **[Moving away from uuid](https://neilmadden.blog/2018/08/30/moving-away-from-uuids/)**   
   
 > 영어로 된 자료를 읽는데 거부감이 있는 분들을 위한 짧은 요약  
 >   
-> 극단적인 상황에서는 특정 uuid를 추측하는데는 약 35분이면 충분하다.
+> 극단적인 상황에서는 특정 uuid를 추측하는데 약 35분이면 충분하다.
 >   
 > uuid를 이용해 16byte 크기의 데이터를 표현하려면 36개의 문자가 필요하지만, base64 encoding을 이용한다면 훨씬 적은 문자로 표현이 가능하다.  
 >   
