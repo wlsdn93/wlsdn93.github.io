@@ -156,7 +156,7 @@ user: {
       
   권장되는 용어는 **`discoverable credential`**이지만, **[여러 이유](https://w3c.github.io/webauthn/#client-side-discoverable-credential)**로 **`resident`**라는 용어가 그대로 사용되고 있습니다.  
      
-  **`residentKey`**는 옵션이 사용 되는 이유는, **`credentialId`**가 아닌 **RP서버에 대한 정보만을** 이용해 연관된 **`credential(private key)`**를 찾도록 하기 위함입니다.   
+  **`residentKey`** 옵션이 사용 되는 이유는, **`credentialId`**가 아닌 **RP서버에 대한 정보만을** 이용해 연관된 **`credential(private key)`**를 찾도록 하기 위함입니다.   
    
   이와 반대대는 개념의 단어는 **`server-side credential`**입니다. **`server-side credential`**을 사용하기 위해서 RP서버는 **`credentialId`**을 응답해야 합니다.  
 
