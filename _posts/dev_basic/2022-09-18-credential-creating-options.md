@@ -205,7 +205,7 @@ const publicKeyCredential = await navigator.credentials.create({
     publicKey: publicKeyCredentialCreationOptions
 });
 
-console.log(credential);
+console.log(publicKeyCredential);
 /*
 PublicKeyCredential {
     id: 'ADSUllKQmbqdGtpu4sjseh4cg2TxSvrbcHDTBsv4NSSX9...',
