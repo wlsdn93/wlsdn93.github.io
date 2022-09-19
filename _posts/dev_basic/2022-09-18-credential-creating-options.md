@@ -139,7 +139,7 @@ user: {
 - **[authenticatorAttachment](https://w3c.github.io/webauthn/#dom-authenticatorselectioncriteria-authenticatorattachment)**
   - **`cross-platform`**  
     사용자의 기기에 종속되지 않은, 외부 인증장치를 의미합니다.  
-  - **`platform`**
+  - **`platform`**  
     사용자 기기에 종속된 인증 장치를 의미합니다.
   
   e.g) `authenticatorAttachment: "cross-platform"` 옵션을 전달할 경우, 사용자는 반드시 외부 인증장치를 사용해야 합니다.
