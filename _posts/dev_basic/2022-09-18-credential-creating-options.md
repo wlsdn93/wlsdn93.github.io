@@ -77,8 +77,17 @@ user: {
     displayName: "Lee"
     }
 ```
-**`user`**는 인증 등록을 요청한 사용자정보를 나타냅니다. 특히 `id`는 인증장치가 **`credential private key`**와 함께 저장하는 값이기 때문에, 사용자를 특정지을 수 없는 값을 사용하는것이 **[권장](https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-user)**됩니다.  
+**`user`**는 인증 등록을 요청한 사용자정보를 나타냅니다. 특히 **`id`**는 인증장치가 **`credential private key`**와 함께 저장하는 값이기 때문에, 사용자를 특정지을 수 없는 값을 사용하는것이 **[권장](https://w3c.github.io/webauthn/#sctn-user-handle-privacy)**됩니다.  
   
+**`user.id`**는 **[`user handle`](https://w3c.github.io/webauthn/#user-handle)**이라고 부르기도 합니다.  
+
+**`user handle`**은 인증 프로세스를 수행하는 과정에서, 사용자를 식별하기 위해 사용됩니다. **`credential ID`**을 사용할 수도 있습니다.  
+  
+- **`user handle`**은 RP서버에 의해 생성되고, 사용자 계정에 등록된 모든 **`credential`**은 **동일한 값**을 갖습니다.  
+
+- **`credential ID`**는 인증장치에 의해 생성되고, 각각의 **`credential`**은 **고유한 값**을 갖습니다.  
+
+    
 ## **pubKeyCredParams (required)**
 ```javascript
   pubKeyCredParams: [
