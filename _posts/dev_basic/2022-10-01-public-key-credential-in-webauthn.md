@@ -1,5 +1,5 @@
 ---
-title : "이제 publicKeyCredential 널 어떻게 해야하니...?"
+title : "[FIDO2] publicKeyCredential 파헤치기"
 excerpt : "등록 프로세스의 핵심 ! 증명을 어떻게 해야하는걸까요?"
 author_profile: true
 sidebar:

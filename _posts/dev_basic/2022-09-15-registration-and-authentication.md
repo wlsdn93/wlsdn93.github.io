@@ -1,5 +1,5 @@
 ---
-title : "Web 환경에서의 FIDO 등록과 인증"
+title : "[FIDO2] Web 환경에서의 FIDO 등록과 인증"
 excerpt : "등록(Registration)과 증명(Attestation), 인증(Authentication)과 승인(Assertion)에 대해 알아봅니다"
 author_profile: true
 sidebar:

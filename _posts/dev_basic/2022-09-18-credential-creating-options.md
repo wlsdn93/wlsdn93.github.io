@@ -1,5 +1,5 @@
 ---
-title : "서버한테 받아야할 게 챌린지만 있는게 아니었네..?"
+title : "[FIDO2] 서버한테 받아야할 게 챌린지만 있는게 아니었네..?"
 excerpt : "등록 프로세스를 시작할 때, 서버가 클라이언트에게 응답하는 값에는 챌린지만 있는게 아닙니다"
 author_profile: true
 sidebar:
@@ -52,9 +52,9 @@ const publicKeyCredentialCreationOptions = {
 
 ```javascript
 rp: {
-    name: "Duo Security",
+    name: "Duo Security"
     id: "duosecurity.com"
-    }
+  }
 ```
 
 **`rp(Relying Party)`**는 인증 서버가 아닌 **사용자가 로그인 하고자 하는 서비스의 서버**를 의미합니다.
