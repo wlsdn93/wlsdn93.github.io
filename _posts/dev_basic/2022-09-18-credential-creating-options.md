@@ -1,5 +1,5 @@
 ---
-title : "[FIDO2] 서버한테 받아야할 게 챌린지만 있는게 아니었네..?"
+title : "[FIDO2] 인증장치야 credential은 이렇게 만들어줘"
 excerpt : "등록 프로세스를 시작할 때, 서버가 클라이언트에게 응답하는 값에는 챌린지만 있는게 아닙니다"
 author_profile: true
 sidebar:

@@ -1,5 +1,5 @@
 ---
-title : "[FIDO2] Challenge 그렇게 만드는거 아닌데..."
+title : "[FIDO2] Challenge 만들기"
 excerpt : "등록과 인증과정에 반드시 필요한 챌린지, 왜 사용하고, 어떻게 만들어야 할 까?"
 author_profile: true
 sidebar:
