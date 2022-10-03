@@ -98,7 +98,7 @@ PublicKeyCredential {
   
 # **AttestationObject**  
 
-**attestationObject**은 인증장치가 생성한 **공개키**, 비밀키를 이용해 **전자서명**한 챌린지 그리고 **증명에 사용될 기타 정보**들을 **[CBOR](https://cbor.io/)**이라는 데이터 형태로 인코딩한 바이너리 데이터 입니다.  
+**attestationObject**은 인증장치가 **attestation secret key**를 이용해 **전자서명**한 **credential public key**와 **인증장치 정보**등을 **[CBOR](https://cbor.io/)**이라는 데이터 형태로 나타낸 값입니다.  
 
 ```json
 {
