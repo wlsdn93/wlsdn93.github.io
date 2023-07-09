@@ -94,7 +94,7 @@ console.log([...arr])
 ```js
 const o = {}
 o["key"] = 1
-console.log(o) // { k: 1 }
+console.log(o) // { key: 1 }
 console.log(o["key"]) // 1
 ```
 
@@ -107,11 +107,3 @@ console.log(Object.keys(arr)) // [0, 4, 4294967295]
 console.log([...arr]) // [1, 1]
 console.log([...Object.values(arr)]) // [1, 1, 1]
 ```
-
-
-
-
-
-
-
-
