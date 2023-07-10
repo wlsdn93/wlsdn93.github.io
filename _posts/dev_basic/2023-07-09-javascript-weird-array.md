@@ -72,7 +72,7 @@ arr[2**32 - 1] = 1
 console.log(arr) // [1, empty × 3, 1, 4294967295: 1]
 console.log(arr.length) // 5
 console.log(arr[2**32 - 1]) // 1
-console.log([...arr])
+console.log([...arr]) // [1, 1]
 ```
 
 네 뭔가 이상합니다. 갑자기 배열안에 key, value 쌍이 생겼습니다. 
